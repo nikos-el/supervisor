@@ -25,10 +25,7 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/nikos-el/supervisor/amd64-hassio-supervisor:latest
-          registry: ghcr.io
           build-args: |
             BUILD_FROM="ubuntu:18.04"
             CAS_VERSION="1.0.2"
             SUPERVISOR_VERSION="2023.03.3"
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
