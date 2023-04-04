@@ -1,27 +1,27 @@
 name: Build supervisor
 
 on:
-  workflow_dispatch:
-    inputs:
-      channel:
-        description: "Channel"
-        required: true
-        default: "dev"
-      version:
-        description: "Version"
-        required: true
-      publish:
-        description: "Publish"
-        required: true
-        default: "false"
-      stable:
-        description: "Stable"
-        required: true
-        default: "false"
-  pull_request:
-    branches: ["main"]
-  release:
-    types: ["published"]
+  #workflow_dispatch:
+  #  inputs:
+  #    channel:
+  #      description: "Channel"
+  #      required: true
+  #      default: "dev"
+  #    version:
+  #      description: "Version"
+  #      required: true
+  #    publish:
+  #      description: "Publish"
+  #      required: true
+  #      default: "false"
+  #    stable:
+  #      description: "Stable"
+  #      required: true
+  #      default: "false"
+  #pull_request:
+  #  branches: ["main"]
+  #release:
+  #  types: ["published"]
   push:
     branches: ["main"]
     paths:
