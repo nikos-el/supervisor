@@ -2,15 +2,9 @@ name: Build supervisor
 
 on:
   push:
-    branches: ["main"]
-    paths:
-      - "rootfs/**"
-      - "supervisor/**"
-      - build.yaml
-      - Dockerfile
-      - requirements.txt
-      - setup.py
-
+    branches: 
+    - main
+    
 env:
   DEFAULT_PYTHON: "3.10"
   BUILD_NAME: supervisor
