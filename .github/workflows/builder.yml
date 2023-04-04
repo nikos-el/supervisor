@@ -182,7 +182,7 @@ jobs:
   run_supervisor:
     runs-on: ubuntu-latest
     name: Run the Supervisor
-    needs: ["build", "codenotary", "init"]
+    needs: ["build", "init"]
     timeout-minutes: 60
     steps:
       - name: Checkout the repository
