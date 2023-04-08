@@ -5,8 +5,8 @@ ENV \
     S6_SERVICES_GRACETIME=10000 \
     SUPERVISOR_API=http://localhost
 
-ARG \
-    CAS_VERSION
+#ARG \
+#    CAS_VERSION
 
 # Install base
 WORKDIR /usr/src
@@ -24,11 +24,11 @@ RUN \
         build-base \
         go \
     \
-    && git clone -b "v${CAS_VERSION}" --depth 1 \
-        https://github.com/codenotary/cas \
-    && cd cas \
-    && make cas \
-    && mv cas /usr/bin/cas \
+#    && git clone -b "v${CAS_VERSION}" --depth 1 \
+#        https://github.com/codenotary/cas \
+#    && cd cas \
+#    && make cas \
+#    && mv cas /usr/bin/cas \
     \
     && apk del .build-dependencies \
     && rm -rf /root/go /root/.cache \
