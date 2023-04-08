@@ -1,5 +1,5 @@
 name: Build supervisor
-#
+
 on:
   push:
     branches: 
@@ -51,8 +51,11 @@ jobs:
     name: Build ${{ matrix.arch }} supervisor
     needs: init
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
     strategy:
-      matrix:
+    matrix:
         arch: ${{ fromJson(needs.init.outputs.architectures) }}
     steps:
       - name: Checkout the repository
