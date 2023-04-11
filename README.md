@@ -1,5 +1,5 @@
 # Home Assistant Supervisor
-
+#
 ## First private cloud solution for home automation
 
 Home Assistant (former Hass.io) is a container-based system for managing your
