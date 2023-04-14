@@ -22,7 +22,7 @@ jobs:
       requirements: ${{ steps.requirements.outputs.changed }}
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v3.5.2
         with:
           fetch-depth: 0
 
@@ -59,7 +59,7 @@ jobs:
         arch: ${{ fromJson(needs.init.outputs.architectures) }}
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v3.5.2
         with:
           fetch-depth: 0
 
@@ -126,7 +126,7 @@ jobs:
 #    steps:
 #      - name: Checkout the repository
 #        if: needs.init.outputs.publish == 'true'
-#        uses: actions/checkout@v3.5.0
+#        uses: actions/checkout@v3.5.2
 #        with:
 #          fetch-depth: 0
 
@@ -164,7 +164,7 @@ jobs:
 #    steps:
 #      - name: Checkout the repository
 #        if: needs.init.outputs.publish == 'true'
-#        uses: actions/checkout@v3.5.0
+#        uses: actions/checkout@v3.5.2
 
 #      - name: Initialize git
 #        if: needs.init.outputs.publish == 'true'
@@ -189,7 +189,7 @@ jobs:
     timeout-minutes: 60
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v3.5.2
 
       - name: Build the Supervisor
         if: needs.init.outputs.publish != 'true'
