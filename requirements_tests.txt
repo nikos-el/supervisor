@@ -1,5 +1,5 @@
 black==23.1.0
-codecov==2.1.12
+codecov==2.1.13
 coverage==7.2.2
 flake8-docstrings==1.7.0
 flake8==6.0.0
